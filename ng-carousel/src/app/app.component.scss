@@ -1,0 +1,13 @@
+.banner-holder {
+    overflow: hidden;
+    width: 600px;
+    .banner {
+        display: flex;
+        width: 600px;
+        div {
+            img {
+                width: 200px;
+            }
+        }
+    }
+}

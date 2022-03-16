@@ -1,1 +1,21 @@
-<router-outlet></router-outlet>
+<div class="banner-holder">
+  <div class="banner" 
+    [@goRight]="goRightState ? 'goRight' : 'stop'"
+    [@goLeft]="goLeftState ? 'goLeft' : 'stop'"
+    (@goRight.done)="stopit()"
+    (@goLeft.done)="stopit()">
+  <!-- <div class="banner" > -->
+    <div class="left">
+      <img [src]="getLeftBanner()" />  
+    </div>
+    <div class="center">
+      <img [src]="getCenterBanner()" />  
+    </div>
+    <div class="right">
+      <img [src]="getRightBanner()" />  
+    </div>
+  </div>
+</div>
+
+<button (click)="goLeft()">Go Left</button>
+<button (click)="goRight()">Go Right</button>
